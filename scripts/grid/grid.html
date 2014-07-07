@@ -1,0 +1,13 @@
+<div id="game-{{ ngModel.gameSize }}">
+	<div class="grid-container">
+		<div class="grid-cell"
+			 data-ng-repeat='cell in ngModel.grid track by $index'>
+		</div>
+	</div>
+	<div class="tile-container">
+		<div tile
+			 data-ng-model='tile'
+			 data-ng-repeat='tile in ngModel.tiles track by $id(tile.id || $index)'>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Jason Lunsford's 2048</title>
+
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  </head>
+  <body data-ng-app='twentyfourtyeightApp'>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="container" data-ui-view="myGameView"></div>
+
+    <!-- Vendor Scripts -->
+    <script type="text/javascript" src="scripts/vendor/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="scripts/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/vendor/angular.js"></script>
+    <script type="text/javascript" src="scripts/vendor/angular-ui-router-0.2.8.js"></script>
+    <script type="text/javascript" src="scripts/vendor/angular-animate-1.2.19.js"></script>
+    <script type="text/javascript" src="scripts/vendor/angular-cookies.js"></script>
+
+    <!-- My Scripts -->
+    <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/grid/grid.js"></script>
+    <script type="text/javascript" src="scripts/grid/grid_directive.js"></script>
+    <script type="text/javascript" src="scripts/grid/tile_directive.js"></script>
+    <script type="text/javascript" src="scripts/keyboard/keyboard.js"></script>
+    <script type="text/javascript" src="scripts/game/game.js"></script>
+
+  </body>
+</html>

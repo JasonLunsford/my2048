@@ -1,0 +1,53 @@
+<!-- ctrl refers to the GameController -->
+<div id="content" data-ng-controller='GameController as ctrl'>
+	<!-- heading -->
+	<div id="heading" class="row">
+		<h1 class="title">my-2048</h1>
+		<div class="scores-container">
+			<div class="score-container">{{ ctrl.game.currentScore }}</div>
+			<div class="best-container">{{ ctrl.game.highScore }}</div>
+		</div>
+	</div>
+
+	<!-- instructions -->
+	<div class="row" id="instructions">
+		Join the numbers and get to the <strong>2048</strong> tile!
+	</div>
+
+	<!-- game board -->
+	<div id="game-container">
+		<div class="row" grid data-ng-model='ctrl.game'></div>
+
+		<div class="row game-overlay" id="game-over" data-ng-if="ctrl.game.gameOver">
+			Game Over!
+
+			<div class="lower">
+				<a class="retry-button" data-ng-click="ctrl.newGame()">Try Again?</a>
+			</div>
+		</div>
+
+		<div class="row game-over" id="win" data-ng-if="ctrl.game.win">
+			You Win!
+
+			<div class="lower">
+				<a class="retry-button" data-ng-click="ctrl.newGame()">Try Again?</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- under game board -->
+	<p class="game-explanation">
+		<strong class="important">How to play:</strong> Use your <strong>W (up), S (down), A (left), and D (right) keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+	</p>
+	<hr>
+
+	<p>
+		<strong class="important">NOTE:</strong> This game was written using AngularJS, SASS, and Bootstrap.
+	</p>
+
+	<hr>
+
+	<p>
+		Completed by Jason Lunsford. Created by <a href="http://fullstackedu.com">Fullstack.io</a> based on 2048 by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
+	</p>
+</div>
